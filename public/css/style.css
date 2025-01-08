@@ -33,6 +33,12 @@
     font-weight: bold;
     color: white;
   }
+
+  .hero-section p {
+    font-size: 15pt;
+    font-weight: bold;
+    color: white;
+  }
   
   .hero-section .btn {
     padding: 10px 20px;
@@ -45,3 +51,364 @@
   .hero-section .btn:hover {
     background: #228B22; 
   }
+
+  .best-seller-section {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+  }
+  
+  .section-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: #333;
+  }
+  
+  .product-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .product-card {
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    background-color: #fff;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+
+  .product-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+
+  .product-card .card-body {
+    padding: 15px;
+  }
+
+  .product-card .card-title {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+  }
+
+  .product-card .card-text {
+    font-size: 14px;
+    color: #555;
+  }
+  
+/* Features Section Styling */
+.features {
+  background-color: #f9f9f9;
+  padding: 2rem 0;
+  border-radius: 8px;
+}
+
+.features .feature-item {
+  margin: 1rem 0;
+}
+
+.features .feature-item i {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #198754;
+}
+
+.features .feature-item h5 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.features .feature-item p {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .news-section .card {
+    margin-bottom: 1.5rem;
+  }
+
+  .features {
+    padding: 1rem;
+  }
+}
+
+.news-section .card {
+  border: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.news-section .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.news-section .card img {
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  max-height: 200px;
+  object-fit: cover;
+}
+
+.news-section .card-body {
+  padding: 1rem;
+}
+
+.news-section .card-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.news-section .card-text {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.date-badge {
+  position: absolute;
+  background-color: #198754; /* Bootstrap success green */
+  color: #fff;
+  top: 10px;
+  left: 10px;
+  padding: 0.5rem;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+.date-badge span {
+  display: block;
+}
+
+/* Footer Styling */
+.footer {
+  background-color: #000; /* Background color */
+  color: #fff; /* Text color */
+  padding: 40px 20px;
+}
+
+.footer-section {
+  text-align: center; /* Untuk memusatkan teks di tengah */
+  margin-bottom: 20px;
+}
+
+.footer-section h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  color: #53ab50; /* Green accent color */
+}
+
+.footer-section p,
+.footer-section ul {
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin: 5px 0;
+}
+
+.footer-section ul li a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+  color: lightgreen; /* Hover color for links */
+}
+
+.footer-bottom {
+  border-top: 1px solid #333;
+  padding-top: 15px;
+  font-size: 12px;
+  color: #666;
+  text-align: center;
+}
+
+.footer-bottom p {
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    text-align: center;
+  }
+  .footer-section {
+    margin-bottom: 30px;
+  }
+}
+
+.about-box {
+  padding: 30px; 
+  background-color: #fff; 
+  border-radius: 10px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  margin: 30px auto; 
+  max-width: 800px; 
+}
+
+.about-content {
+  text-align: center; 
+}
+
+.about-title {
+  font-size: 2rem; 
+  font-weight: bold; 
+  color: #28a745; 
+  margin-bottom: 20px; 
+}
+
+.about-description {
+  font-size: 1.1rem; 
+  color: #555; 
+  line-height: 1.8; 
+  margin-bottom: 30px; 
+}
+
+
+/* Default Grid View */
+.product-container.grid-view .product-card {
+  flex: 0 0 30%;
+  margin: 10px;
+}
+
+/* List View */
+.product-container.list-view {
+  display: block;
+}
+
+.product-container.list-view .product-card {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.product-container.list-view .product-card img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  margin-right: 20px;
+}
+
+.product-container.list-view .product-card .card-body {
+  text-align: left;
+}
+
+/* Filter Header Section */
+.filter-header {
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+}
+
+.view-options .view-btn {
+  border: none;
+  font-size: 1.2rem;
+  transition: background-color 0.3s ease;
+}
+
+.view-options .view-btn.active {
+  background-color: #53ab50;
+  color: white;
+}
+
+.view-options .view-btn:hover {
+  background-color: #e9ecef;
+}
+
+.sort-filter button {
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.sort-filter button i {
+  font-size: 1rem;
+}
+
+.filter-section .btn {
+  margin: 0 5px;
+  border-radius: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.filter-section .btn.active,
+.filter-section .btn:hover {
+  background-color: #53ab50;
+  color: white;
+}
+
+.contact-box {
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 30px auto;
+  max-width: 800px;
+}
+
+.contact-content {
+  text-align: center;
+}
+
+.contact-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #28a745; /* Warna hijau sesuai tema */
+  margin-bottom: 20px;
+}
+
+.contact-description {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.8;
+  margin-bottom: 30px;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1rem;
+  color: #555;
+}
+
+.contact-item i {
+  font-size: 1.5rem;
+  color: #28a745; /* Warna hijau untuk ikon */
+}
