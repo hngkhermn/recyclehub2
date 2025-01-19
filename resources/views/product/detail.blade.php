@@ -6,20 +6,20 @@
       <!-- Gambar Produk -->
       <div class="col-md-6">
         <div class="product-image">
-          <img src="{{ asset('images/1plastik/plastik (1).jpg') }}" class="img-fluid" alt="Detail Produk">
+          <img src="{{ asset('images/1plastik/plastik (1).jpg') }}" class="img-fluid" alt="{{ $product->name }}">
         </div>
       </div>
       <!-- Informasi Produk -->
       <div class="col-md-6">
         <div class="product-info">
-          <h1 class="product-title">Bahan Baku Plastik</h1>
-          <p class="sku text-muted">SKU: PL-101</p>
+          <h1 class="product-title">{{ $product->name }}</h1>
+          <p class="sku text-muted">SKU: {{ 'PROD-' . $product->id_products }}</p>
           <div class="price-section">
-            <span class="original-price text-muted">Rp 30.000</span>
-            <span class="sale-price">Rp 25.000</span>
+            <span class="original-price text-muted">Rp {{ number_format($product->price * 1.2, 0, ',', '.') }}</span>
+            <span class="sale-price">Rp {{ number_format($product->price, 0, ',', '.') }}</span>
           </div>
           <p class="product-description">
-            Bahan baku plastik ini cocok untuk berbagai keperluan daur ulang. Produk ini memiliki kualitas tinggi dan ramah lingkungan. Dengan produk ini, Anda turut mendukung upaya pelestarian lingkungan.
+            {{ $product->description }}
           </p>
           <div class="quantity-section d-flex align-items-center mt-4">
             <input type="number" class="form-control quantity-input me-3" value="1" min="1">

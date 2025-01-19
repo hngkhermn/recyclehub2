@@ -33,7 +33,8 @@
   <div class="container">
     <div class="row products-container">
     @foreach($products as $product)
-      <div class="col-md-4 product-card" data-category="Plastik">
+      <div class="col-md-4 product-card" data-category="#" >
+        <a href="{{ route('product.detail', $product->id_products) }}" class="text-decoration-none"></a>
         <div class="card">
           <img src="{{ asset('images/1plastik/plastik (10).jpg') }}" class="card-img-top" alt="Plastik">
           <div class="card-body text-center">

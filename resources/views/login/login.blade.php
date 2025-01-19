@@ -13,18 +13,15 @@
 <div class="container-lgn">
     <div class="login-container">
       <h2>Login</h2>
-      <form action="#" method="POST">
+      <form action="{{ route('loginProses') }}" method="post">
+        @csrf 
         <div class="mb-3">
           <label for="email" class="form-label"></label>
-          <input type="email" class="form-control" id="email" placeholder="Email" required>
+          <input type="text" name="email" placeholder="Email">
         </div>
         <div class="mb-3">
           <label for="password" class="form-label"></label>
-          <input type="password" class="form-control" id="password" placeholder="Password" required>
-        </div>
-        <div class="form-check mb-3">
-          <input type="checkbox" class="form-check-input" id="remember">
-          <label class="form-check-label" for="remember">Remember password</label>
+          <input type="password" name="password" placeholder="Password">
         </div>
         <button type="submit" class="btn btn-primary w-100 mb-3">LOGIN</button>
       </form>

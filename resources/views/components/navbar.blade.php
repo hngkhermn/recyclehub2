@@ -18,9 +18,6 @@
           <a class="nav-link" href="/product">PRODUCT</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">NEWS</a>
-        </li>
-        <li class="nav-item">
           <a class="nav-link" href="#">CONTACT</a>
         </li>
       </ul>
