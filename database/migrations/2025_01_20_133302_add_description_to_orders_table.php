@@ -11,11 +11,8 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('orders', function (Blueprint $table) {
-            $table->id('id_orders');
-            $table->dateTime('date');
-            $table->decimal('total_price');
-            $table->timestamps();
+        Schema::table('orders', function (Blueprint $table) {
+            $table->string('description')->nullable(); // admin or user
         });
     }
 
@@ -24,6 +21,8 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('orders');
+        Schema::table('orders', function (Blueprint $table) {
+            //
+        });
     }
 };

@@ -1,7 +1,7 @@
 <x-header></x-header>
 <div class="container">
     <h1>{{ isset($product) ? 'Edit Product' : 'Add Product' }}</h1>
-    <form action="{{ isset($product) ? route('dashboard.update', $product) : route('dashboard.store') }}" method="POST" enctype="multipart/form-data">
+    <form action="{{ route('dashboard.store') }}" method="POST" enctype="multipart/form-data">
         @csrf
         @if (isset($product))
             @method('PUT')
@@ -12,7 +12,7 @@
         </div>
         <div class="form-group">
             <label for="images">Images</label>
-            <input type="file" name="images" class="form-control" value="{{ $product->images ?? old('images') }}" required>
+            <input type="file" name="images" class="form-control" value="" required>
         </div>
         <div class="form-group">
             <label for="description">Description</label>

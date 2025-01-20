@@ -31,21 +31,24 @@
 
 <section class="products-section mt-4">
   <div class="container">
-    <div class="row products-container">
     @foreach($products as $product)
-      <div class="col-md-4 product-card" data-category="#" >
-        <a href="{{ route('product.detail', $product->id_products) }}" class="text-decoration-none"></a>
-        <div class="card">
-          <img src="{{ asset('images/1plastik/plastik (10).jpg') }}" class="card-img-top" alt="Plastik">
-          <div class="card-body text-center">
-            <h5 class="card-title">{{ $product->name }}</h5>
-            <p class="card-text">Rp {{ $product->price }}</p>
+      <!-- Wrap the entire card with the anchor tag to make it clickable -->
+      <a href="{{ route('product.detail', ['id_products' => $product->id_products]) }}" class="text-decoration-none">
+        <div class="row products-container">
+          <div class="col-md-4 product-card" data-category="#">
+            <div class="card">
+              <img src="/storage/images/{{ $product->images }}" class="card-img-top" alt="Plastik">
+              <div class="card-body text-center">
+                <h5 class="card-title">{{ $product->name }}</h5>
+                <p class="card-text">Rp {{ $product->price }}</p>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
+      </a>
     @endforeach
-    </div>
   </div>
 </section>
+
 
 </x-layout>

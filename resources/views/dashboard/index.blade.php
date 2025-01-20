@@ -24,7 +24,7 @@
                     <td>{{ $product->id_products }}</td>
                     @if(isset($product) && $product->images)
                     <td>
-                        <img src="{{ asset('storage/' . $product->images) }}" alt="Product Image">
+                        <img src="/storage/images/{{$product->images}}" alt="Product Image" width="100px">
                     </td>  
                     @endif
                     <td>{{ $product->name }}</td>
@@ -33,9 +33,9 @@
                     <td>{{ $product->stock }}</td>
                     <td>{{ $product->categories }}</td>
                     <td>
-                        <a href="#" class="btn btn-info">View</a>
-                        <a href="#" class="btn btn-warning">Edit</a>
-                        <form action="#" method="POST" style="display:inline;">
+                        <a href="{{ route('dashboard.show', ['dashboard' => $product->id_products]) }}" class="btn btn-info">View</a>
+                        <a href="{{ route('dashboard.edit', ['dashboard' => $product->id_products]) }}" class="btn btn-warning">Edit</a>
+                        <form action="{{ route('dashboard.destroy', ['dashboard' => $product->id_products]) }}" method="POST" style="display:inline;">
                             @csrf
                             @method('DELETE')
                             <button type="submit" class="btn btn-danger">Delete</button>

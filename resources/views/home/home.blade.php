@@ -14,7 +14,7 @@
     <div class="product-container">
       @foreach($products as $product)
       <div class="product-card">
-        <img src="{{ asset('images/1plastik/plastik (10).jpg') }}" alt="Waste Recycling Machine">
+        <img src="/storage/images/{{$product->images}}" alt="Waste Recycling Machine">
         <div class="product-name">{{ $product->name }}</div>
       </div>
       @endforeach

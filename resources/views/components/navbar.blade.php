@@ -22,15 +22,26 @@
         </li>
       </ul>
       <div class="d-flex align-items-center">
-        <a href="#" class="btn btn-success me-2">
+        <!-- <a href="#" class="btn btn-success me-2">
           <i class="bi bi-search"></i>
-        </a>
-        <a href="#" class="btn btn-success me-2">
+        </a> -->
+        <!-- <a href="#" class="btn btn-success me-2">
           <i class="bi bi-basket2-fill"></i>
-        </a>
-        <a href="#" class="btn btn-success me-2">
-          <i class="bi bi-person"></i>
-        </a>
+        </a> -->
+        @auth
+          <!-- Logout Button -->
+          <form action="{{ route('logout') }}" method="POST" class="d-inline">
+            @csrf
+            <button type="submit" class="btn btn-danger me-2">
+              <i class="bi bi-box-arrow-right"></i> Logout
+            </button>
+          </form>
+        @else
+          <!-- Login Button -->
+          <a href="{{ route('login') }}" class="btn btn-success me-2">
+            <i class="bi bi-person"></i> Login
+          </a>
+        @endauth
       </div>
     </div>
   </div>

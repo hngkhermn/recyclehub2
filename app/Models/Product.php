@@ -10,4 +10,5 @@ class Product extends Model
     use HasFactory;
 
     protected $guarded = ['id_products'];
+    protected $primaryKey = 'id_products';
 }
